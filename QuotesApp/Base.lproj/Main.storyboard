@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Quote View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="QuoteViewController" customModule="QuotesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,96 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quotecard" translatesAutoresizingMaskIntoConstraints="NO" id="NWo-41-xnM">
+                                <rect key="frame" x="7" y="91" width="361" height="484"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NWo-41-xnM" secondAttribute="height" multiplier="361:484" id="O7U-6f-8fa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_dark" translatesAutoresizingMaskIntoConstraints="NO" id="BWp-YX-4q0">
+                                <rect key="frame" x="127" y="28" width="121" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BWp-YX-4q0" secondAttribute="height" multiplier="121:41" id="buf-BB-swL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8T1-yn-JLz">
+                                <rect key="frame" x="16" y="610" width="343" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8T1-yn-JLz" secondAttribute="height" multiplier="343:37" id="uRa-ff-cXt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Inspire Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextQuoteButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQ6-J1-kQe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxk-tw-Moe">
+                                <rect key="frame" x="44" y="211" width="287" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="164" id="Nle-Qb-Y9K"/>
+                                </constraints>
+                                <string key="text">If you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what’s next.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumb_steve" translatesAutoresizingMaskIntoConstraints="NO" id="OjQ-32-MJi">
+                                <rect key="frame" x="38" y="483" width="60" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="OJ0-XZ-wI1"/>
+                                    <constraint firstAttribute="height" constant="62" id="ZNp-oz-IjJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steve Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0FQ-Ru-St6">
+                                <rect key="frame" x="127" y="500" width="199" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="Bcc-j4-gal"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NWo-41-xnM" firstAttribute="top" secondItem="Gxk-tw-Moe" secondAttribute="bottom" constant="-284" id="1Pv-1D-Pn9"/>
+                            <constraint firstAttribute="trailing" secondItem="BWp-YX-4q0" secondAttribute="trailing" constant="127" id="3CG-yD-FSQ"/>
+                            <constraint firstItem="0FQ-Ru-St6" firstAttribute="leading" secondItem="OjQ-32-MJi" secondAttribute="trailing" constant="29" id="9e2-j0-f0k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gxk-tw-Moe" secondAttribute="trailing" constant="28" id="9x6-xK-u6E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8T1-yn-JLz" secondAttribute="bottom" constant="20" id="GBT-V1-iWY"/>
+                            <constraint firstAttribute="trailing" secondItem="NWo-41-xnM" secondAttribute="trailing" constant="7" id="M3W-P9-L2o"/>
+                            <constraint firstItem="Gxk-tw-Moe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="28" id="M8Z-ka-e3f"/>
+                            <constraint firstItem="BWp-YX-4q0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ROu-8E-NBV"/>
+                            <constraint firstItem="OjQ-32-MJi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="XwZ-t8-1UB"/>
+                            <constraint firstItem="8T1-yn-JLz" firstAttribute="top" secondItem="0FQ-Ru-St6" secondAttribute="bottom" constant="89.5" id="YRg-3R-F0G"/>
+                            <constraint firstItem="8T1-yn-JLz" firstAttribute="top" secondItem="NWo-41-xnM" secondAttribute="bottom" constant="35" id="g6C-hH-zRz"/>
+                            <constraint firstItem="8T1-yn-JLz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="gG8-2n-le3"/>
+                            <constraint firstAttribute="trailing" secondItem="8T1-yn-JLz" secondAttribute="trailing" constant="16" id="hKV-fi-kef"/>
+                            <constraint firstItem="BWp-YX-4q0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="127" id="jdK-2X-HPz"/>
+                            <constraint firstItem="8T1-yn-JLz" firstAttribute="top" secondItem="OjQ-32-MJi" secondAttribute="bottom" constant="65" id="kcZ-Vz-ySB"/>
+                            <constraint firstItem="NWo-41-xnM" firstAttribute="top" secondItem="BWp-YX-4q0" secondAttribute="bottom" constant="22" id="tl1-dZ-4JS"/>
+                            <constraint firstItem="NWo-41-xnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="7" id="wsR-n6-Sae"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextQuoteBtn" destination="8T1-yn-JLz" id="Mmp-qV-hvP"/>
+                        <outlet property="quoteImageView" destination="OjQ-32-MJi" id="UPf-Z9-yZi"/>
+                        <outlet property="quoteNameLabel" destination="0FQ-Ru-St6" id="mKf-Pc-DHQ"/>
+                        <outlet property="quotesContentLabel" destination="Gxk-tw-Moe" id="GjB-Pi-f3L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_dark" width="117" height="41"/>
+        <image name="quotecard" width="361" height="484"/>
+        <image name="thumb_steve" width="80" height="80"/>
+    </resources>
 </document>

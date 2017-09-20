@@ -12,6 +12,8 @@
 		FFA1B62C1F42D96800A66541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B62A1F42D96800A66541 /* Main.storyboard */; };
 		FFA1B62E1F42D96800A66541 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B62D1F42D96800A66541 /* Assets.xcassets */; };
 		FFA1B6311F42D96800A66541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA1B62F1F42D96800A66541 /* LaunchScreen.storyboard */; };
+		FFA1B6391F42DAE600A66541 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B6381F42DAE600A66541 /* Quotes.swift */; };
+		FFA1B63B1F42E40000A66541 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA1B63A1F42E40000A66541 /* QuoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FFA1B62D1F42D96800A66541 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA1B6301F42D96800A66541 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFA1B6321F42D96800A66541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFA1B6381F42DAE600A66541 /* Quotes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		FFA1B63A1F42E40000A66541 /* QuoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				FFA1B62D1F42D96800A66541 /* Assets.xcassets */,
 				FFA1B62F1F42D96800A66541 /* LaunchScreen.storyboard */,
 				FFA1B6321F42D96800A66541 /* Info.plist */,
+				FFA1B6381F42DAE600A66541 /* Quotes.swift */,
+				FFA1B63A1F42E40000A66541 /* QuoteViewController.swift */,
 			);
 			path = QuotesApp;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFA1B6291F42D96800A66541 /* ViewController.swift in Sources */,
+				FFA1B63B1F42E40000A66541 /* QuoteViewController.swift in Sources */,
 				FFA1B6271F42D96800A66541 /* AppDelegate.swift in Sources */,
+				FFA1B6391F42DAE600A66541 /* Quotes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
